@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ShieldHalf } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const Navbar = () => {
@@ -32,13 +32,14 @@ const Navbar = () => {
 
   return (
     <nav className={cn(
-      "fixed top-0 w-full z-50 transition-all duration-300",
-      scrolled ? "bg-white/90 shadow backdrop-blur-sm" : "bg-transparent"
+      "fixed top-0 w-full z-50 transition-all duration-300 bg-secondary/95 border-b border-primary/10",
+      scrolled ? "shadow-lg" : ""
     )}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16">
-          <div className="flex-shrink-0">
-            <a href="#" className="text-xl font-serif font-bold text-primary">Portfolio</a>
+          <div className="flex-shrink-0 flex items-center">
+            <ShieldHalf className="mr-2 text-primary" />
+            <a href="#" className="text-xl font-bold uppercase tracking-widest text-white">Portfolio</a>
           </div>
           
           {/* Desktop Nav */}
@@ -48,16 +49,16 @@ const Navbar = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="hover:text-primary transition-colors font-medium"
+                  className="hover:text-primary transition-colors font-medium uppercase text-sm tracking-wider"
                 >
                   {link.name}
                 </a>
               ))}
               <a 
                 href="#contact" 
-                className="btn btn-primary px-4 py-2"
+                className="btn btn-primary px-4 py-2 rounded-sm border border-primary/50 uppercase text-sm tracking-wider"
               >
-                Get in Touch
+                Engage
               </a>
             </div>
           </div>
@@ -66,7 +67,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-primary hover:bg-primary hover:bg-opacity-10"
+              className="inline-flex items-center justify-center p-2 rounded-sm text-white hover:bg-primary/10"
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -75,13 +76,13 @@ const Navbar = () => {
       </div>
 
       {/* Mobile menu */}
-      <div className={`md:hidden ${isOpen ? 'block' : 'hidden'} bg-white shadow-lg`}>
+      <div className={`md:hidden ${isOpen ? 'block' : 'hidden'} bg-secondary shadow-lg`}>
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="block px-3 py-2 rounded-md text-base font-medium hover:bg-primary hover:text-white"
+              className="block px-3 py-2 rounded-sm text-sm font-medium hover:bg-primary/20 uppercase"
               onClick={() => setIsOpen(false)}
             >
               {link.name}
@@ -89,10 +90,10 @@ const Navbar = () => {
           ))}
           <a
             href="#contact"
-            className="block px-3 py-2 rounded-md text-base font-medium bg-primary text-white"
+            className="block px-3 py-2 rounded-sm text-sm font-medium bg-primary text-white uppercase"
             onClick={() => setIsOpen(false)}
           >
-            Get in Touch
+            Engage
           </a>
         </div>
       </div>
