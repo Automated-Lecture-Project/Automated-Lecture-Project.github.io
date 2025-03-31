@@ -1,7 +1,258 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>maindframe - AI-Powered Learning</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+	    margin:0;
+            padding: 20px 20px 20px 20px;
+            background: linear-gradient(to right, #f2f2f2, #e6e6e6);
+            color: #000;
+            border-bottom: 2px solid #ccc;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        body {
+            padding-top: 80px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 32px;
+            font-weight: bold;
+            color: #000;
+        }
+        .logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .logo .ai {
+            color: #8a2be2;
+        }
+        .nav {
+            display: flex;
+            gap: 25px;
+        }
+        .nav a {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .cta-button {
+            background: #8a2be2;
+            color: #fff;
+            font-size: 16px;
+            padding: 10px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .cta-button:hover {
+            background: #6a0dad;
+        }
+        .hero, .projects, .team, .contact {
+            text-align: center;
+            padding: 50px;
+        }
+        .hero {
+            background: linear-gradient(to right, #2e004f, #4b0082);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .hero-text {
+            max-width: 600px;
+        }
+        .hero-text h1 {
+            font-size: 32px;
+        }
+        .projects {
+            background: linear-gradient(to right, #f2f2f2, #e6e6e6);
+            color: #000;
+            border-top: 2px solid #ccc;
+            border-bottom: 2px solid #ccc;
+        }
+        .team {
+            background: linear-gradient(to right, #2e004f, #4b0082);
+        }
+        .contact {
+            background: linear-gradient(to right, #f2f2f2, #e6e6e6);
+            color: #000;
+            border-top: 2px solid #ccc;
+        }
+        .project, .team-member {
+            background: #fff;
+            color: #000;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 12px;
+            width: 60%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            border: 1px solid #ddd;
+        }
+        .team-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .team-member {
+            width: 250px;
+            text-align: center;
+        }
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            border: 2px solid #8a2be2;
+        }
+        .contact-form {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .contact-form textarea {
+            height: 150px;
+        }
+        .contact-form button {
+            background: #8a2be2;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .contact-form button:hover {
+            background: #6a0dad;
+        }
+        .projects .project {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+        .projects .project img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .projects .project:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+        .projects .project h3, .projects .project p {
+            text-align: left;
+        }
+        .projects .project h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
 <body>
-<h1>Ho World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+        <header>
+        <div class="logo">
+            <img src="figures/logo.png" alt="Logo">
+            m<span class="ai">ai</span>ndframe
+        </div>
+        <nav class="nav">
+            <a href="#mission">Mission</a>
+            <a href="#projects">Projects</a>
+            <a href="#team">Team</a>
+        </nav>
+        <a href="#contact" class="cta-button">Contact Us</a>
+    </header>
+    
+    <section class="hero" id="mission">
+        <div class="hero-text">
+            <h1>Transforming Learning with AI-Powered Education</h1>
+            <p>Creating customized education for everyone on the globe</p>
+        </div>
+        <img src="figures/logo.png" alt="Large Logo" style="max-width: 500px; height: auto;">
+    </section>
+    
+    <section class="projects" id="projects">
+        <h2>Our Projects</h2>
+        <div class="project">
+            <div>
+                <h3>Scientific Celebrities Game</h3>
+                <p>An AI-powered word guessing game that helps in learning about famous scientists and their contributions. Test your knowledge in a fun, interactive way.</p>
+            </div>
+            <img src="figures/7642e329-2a78-438a-aaad-e735b57c1289.png" alt="Scientific Celebrities Game">
+        </div>
+        <div class="project">
+            <div>
+                <h3>Quantum Mechanics Lecture Series</h3>
+                <p>A fully interactive lecture that guides you through unknown unknowns, delivered by avatars of famous scientists, engaging you with exercises and explanations you wouldn’t ask a chatbot.</p>
+            </div>
+            <img src="figures/5695ac84-e2bd-4eb7-b05b-b2f16404314f.png" alt="Quantum Mechanics Lecture Series">
+        </div>
+        <div class="project">
+            <div>
+                <h3>AI-Based Onboarding Platform</h3>
+                <p>A customizable onboarding solution that adapts to various industries, creating personalized training paths for new employees.</p>
+            </div>
+            <img src="figures/b4baef62-291a-46d2-8861-bb09b7a45637.png" alt="Onboarding Platform">
+        </div>
+    </section>
+    
+    <section class="team" id="team">
+        <h2>Meet Our Team</h2>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="placeholder-image.jpg" alt="Team Member">
+                <h3>John Doe</h3>
+                <p>CEO & Founder</p>
+            </div>
+            <div class="team-member">
+                <img src="placeholder-image.jpg" alt="Team Member">
+                <h3>Jane Smith</h3>
+                <p>Lead AI Engineer</p>
+            </div>
+            <div class="team-member">
+                <img src="placeholder-image.jpg" alt="Team Member">
+                <h3>Michael Johnson</h3>
+                <p>Product Manager</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <form action="mailto:maindframe@gmail.com" method="post" enctype="text/plain" class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
 </body>
 </html>
